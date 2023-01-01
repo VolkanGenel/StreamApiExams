@@ -113,7 +113,6 @@ public class PersonelController {
         } while (secenek!=0);
 
     }
-
     public void update() {
     deleteById();
     save();
@@ -131,5 +130,4 @@ public class PersonelController {
         Long id = Long.parseLong(sc.nextLine());
         personelService.deleteById(id);
     }
-
 }
