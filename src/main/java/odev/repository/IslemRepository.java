@@ -4,9 +4,7 @@ import odev.repository.entity.Departman;
 import odev.repository.entity.Personel;
 import odev.repository.entity.utility.StaticValues;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class IslemRepository {
@@ -28,5 +26,18 @@ public class IslemRepository {
     public Map<Departman,List<Personel>> departmanPersonelListesi() {
         Map<Departman,List<Personel>> departmanListMap = StaticValues.personelListesi.stream().collect(Collectors.groupingBy(Personel::getDepartman));
         return departmanListMap;
+    }
+
+    public void enCokPersonelBulunanDepartman () {
+
+    }
+    public Set<String> mudurSorumluluk () {
+        Set <String> mudurSorumlulukAlani = new TreeSet<>();
+
+        return null;
+    }
+    public Map<Long,List<Personel>> kayitTarihineGoreSirala() {
+        Map<Long,List<Personel>> kayitTarihiListMap = StaticValues.personelListesi.stream().collect(Collectors.groupingBy(Personel::getCreateDate));
+        return kayitTarihiListMap;
     }
 }

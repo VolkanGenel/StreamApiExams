@@ -95,7 +95,7 @@ public class KullaniciPaneli {
                 case 2: muhasebeIslemleri();break;
                 case 3: raporlamalar(); break;
                 case 4: personelController.deleteById();
-                case 5: personelController.findById();
+                case 5: islemController.kayitTarihineGoreSirala();
                 case 6: departmanController.save(); break;
                 default: System.out.println("Hatalı Giriş Yaptınız"); break;
             }

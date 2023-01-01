@@ -31,8 +31,22 @@ public class IslemController{
     public void departmanPersonelListesi() {
     islemService.departmanPersonelListesi().forEach((x,y)-> System.out.println(x+" ---> " +y));
     }
-    public void enCokPersonelBulunanDepartman () {
 
+    /**
+    public void enCokPersonelBulunanDepartman () {
+        for (int i = 0; i < StaticValues.departmanListesi.size(); i++) {
+            StaticValues.personelListesi.stream().forEach(x -> {
+                x.getDepartman().getAd().equals(StaticValues.departmanListesi.get(i).getAd());
+
+            });
+        }
+    }
+    */
+    public void mudurSorumluluk () {
+
+    }
+    public void kayitTarihineGoreSirala() {
+        islemService.kayitTarihineGoreSirala().forEach((x,y)-> System.out.println(x+" ---> " +y));
     }
 
 }
