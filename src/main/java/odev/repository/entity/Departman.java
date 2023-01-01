@@ -1,11 +1,13 @@
 package odev.repository.entity;
 
+import odev.repository.entity.utility.StaticValues;
+
 public class Departman {
     Long id;
     String ad;
 
-    public Departman(Long id, String ad) {
-        this.id = id;
+    public Departman(String ad) {
+        this.id = StaticValues.departmanidOlustur();
         this.ad = ad;
     }
 

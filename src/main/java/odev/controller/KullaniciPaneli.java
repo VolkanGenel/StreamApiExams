@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class KullaniciPaneli {
     PersonelController personelController;
     DepartmanController departmanController;
+    IslemController islemController;
     Scanner sc;
 
     public KullaniciPaneli() {
         personelController = new PersonelController();
         departmanController = new DepartmanController();
+        islemController = new IslemController();
     }
     public void run() {
         int secim = 0;
@@ -68,8 +70,8 @@ public class KullaniciPaneli {
             islem = sc.nextInt();
             switch (islem) {
                 case 0: System.out.println("Ana Menüye Dönülüyor");break;
-                case 1: personelIslemleri();break; //MUTLAKA DÖN
-                case 2: muhasebeIslemleri();break; // MUTLAKA DÖN
+                case 1: islemController.personelMaasiDuzenle();break;
+                case 2: islemController.odemeListesi();break;
                 default: System.out.println("Hatalı Giriş Yaptınız"); break;
             }
         } while (islem!=0);
@@ -89,7 +91,7 @@ public class KullaniciPaneli {
             islem = sc.nextInt();
             switch (islem) {
                 case 0: System.out.println("Ana Menüye Dönülüyor");break;
-                case 1: personelIslemleri();break;
+                case 1: islemController.departmanPersonelListesi();break;
                 case 2: muhasebeIslemleri();break;
                 case 3: raporlamalar(); break;
                 case 4: personelController.deleteById();
