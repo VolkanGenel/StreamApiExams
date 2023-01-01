@@ -1,13 +1,14 @@
 package odev.repository.entity;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mudur extends Personel {
     public int maasekodeme;
-    String [] gorevalanlari;
-    String [] baglipersoneller;
+    List <String> gorevalanlari;
+    List <String> baglipersoneller;
 
-    public Mudur(String ad, String soyisim, String unvan, double maas, String telefon, String aciltelefon, String tckimlik, Departman departman, int maasekodeme, String[] gorevalanlari, String[] baglipersoneller) {
+    public Mudur(String ad, String soyisim, String unvan, double maas, String telefon, String aciltelefon, String tckimlik, Departman departman, int maasekodeme, List<String> gorevalanlari, List<String> baglipersoneller) {
         super(ad, soyisim, unvan, maas, telefon, aciltelefon, tckimlik, departman);
         this.maasekodeme = maasekodeme;
         this.gorevalanlari = gorevalanlari;
@@ -18,8 +19,8 @@ public class Mudur extends Personel {
     public String toString() {
         return "Mudur{" +
                 "maasekodeme=" + maasekodeme +
-                ", gorevalanlari=" + Arrays.toString(gorevalanlari) +
-                ", baglipersoneller=" + Arrays.toString(baglipersoneller) +
+                ", gorevalanlari=" + gorevalanlari +
+                ", baglipersoneller=" + baglipersoneller +
                 '}';
     }
 
@@ -31,19 +32,19 @@ public class Mudur extends Personel {
         this.maasekodeme = maasekodeme;
     }
 
-    public String[] getGorevalanlari() {
+    public List<String> getGorevalanlari() {
         return gorevalanlari;
     }
 
-    public void setGorevalanlari(String[] gorevalanlari) {
+    public void setGorevalanlari(List<String> gorevalanlari) {
         this.gorevalanlari = gorevalanlari;
     }
 
-    public String[] getBaglipersoneller() {
+    public List<String> getBaglipersoneller() {
         return baglipersoneller;
     }
 
-    public void setBaglipersoneller(String[] baglipersoneller) {
+    public void setBaglipersoneller(List<String> baglipersoneller) {
         this.baglipersoneller = baglipersoneller;
     }
 }
