@@ -32,16 +32,10 @@ public class IslemController{
     islemService.departmanPersonelListesi().forEach((x,y)-> System.out.println(x+" ---> " +y));
     }
 
-    /**
     public void enCokPersonelBulunanDepartman () {
-        for (int i = 0; i < StaticValues.departmanListesi.size(); i++) {
-            StaticValues.personelListesi.stream().forEach(x -> {
-                x.getDepartman().getAd().equals(StaticValues.departmanListesi.get(i).getAd());
-
-            });
-        }
+        System.out.println(islemService.enCokPersonelBulunanDepartman());
     }
-    */
+
     public void mudurSorumluluk () {
 
     }

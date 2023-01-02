@@ -22,8 +22,8 @@ public class IslemService {
     return islemRepository.departmanPersonelListesi();
     }
 
-    public void enCokPersonelBulunanDepartman () {
-
+    public String enCokPersonelBulunanDepartman () {
+    return islemRepository.enCokPersonelBulunanDepartman();
     }
 
     public Set<String> mudurSorumluluk () {

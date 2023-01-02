@@ -92,7 +92,7 @@ public class KullaniciPaneli {
             switch (islem) {
                 case 0: System.out.println("Ana Menüye Dönülüyor");break;
                 case 1: islemController.departmanPersonelListesi();break;
-                case 2: muhasebeIslemleri();break;
+                case 2: islemController.enCokPersonelBulunanDepartman();break;
                 case 3: raporlamalar(); break;
                 case 4: personelController.deleteById();
                 case 5: islemController.kayitTarihineGoreSirala();

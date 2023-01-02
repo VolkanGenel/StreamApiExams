@@ -10,6 +10,7 @@ public class StaticValues {
     public static Long departmanid = 0L;
     public static List<Personel> personelListesi = new ArrayList<>();
     public static List<Departman> departmanListesi = new ArrayList<Departman>();
+
     public static Map<Departman, List<Personel>> gruplanmisListem = new TreeMap<>();
     public static long idOlustur() {
         id++;

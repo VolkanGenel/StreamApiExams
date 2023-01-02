@@ -4,6 +4,7 @@ import odev.repository.entity.Departman;
 import odev.repository.entity.Personel;
 import odev.repository.entity.utility.StaticValues;
 
+import java.awt.event.PaintEvent;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -28,8 +29,18 @@ public class IslemRepository {
         return departmanListMap;
     }
 
-    public void enCokPersonelBulunanDepartman () {
-
+    public String enCokPersonelBulunanDepartman () {
+        int sayi=0;
+        List<Personel> tempList = new ArrayList<>();
+        Map<Departman,List<Personel>> departmanListMap = StaticValues.personelListesi.stream().collect(Collectors.groupingBy(Personel::getDepartman));
+       Collection<List<Personel>> personelSet= departmanListMap.values();
+        for (List<Personel> personellist:personelSet) {
+            if (personellist.size()>sayi) {
+                sayi = personellist.size();
+                tempList = personellist;
+            }
+        }
+        return tempList.get(0).getDepartman().getAd();
     }
     public Set<String> mudurSorumluluk () {
         Set <String> mudurSorumlulukAlani = new TreeSet<>();
